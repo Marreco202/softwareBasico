@@ -5,13 +5,13 @@
 #include <stdlib.h>
 #include "gera.h"
 
-int main() {
+int main(int args, char *argv[]) {
   FILE *myfp;
   funcp funcaoSimples;
   int res;
 
   /* Abre o arquivo fonte */
-  if ((myfp = fopen("teste.txt", "r")) == NULL) {
+  if ((myfp = fopen(argv[1], "r")) == NULL) {
     perror("Falha na abertura do arquivo fonte\n");
     exit(1);
   }
